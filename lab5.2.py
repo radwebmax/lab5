@@ -1,6 +1,7 @@
 import unittest
-import app as tested_app
-import json
+import lab5 as tested_app
+
+
 
 class FlaskAppTests(unittest.TestCase):
 
@@ -9,7 +10,7 @@ class FlaskAppTests(unittest.TestCase):
 
     def test_get_hello_endpoint(self):
         r = self.app.get('/')
-        self.assertEqual(r.status, '200 ok')
+        self.assertEqual(r.status, '200 OK')
         self.assertEqual(r.data, b'Hello world!')
 
 if __name__ == '__main__':
