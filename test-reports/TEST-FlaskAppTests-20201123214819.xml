@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FlaskAppTests-20201123214819" tests="1" file=".py" time="0.007" timestamp="2020-11-23T21:48:19" failures="0" errors="1" skipped="0">
+	<testcase classname="FlaskAppTests" name="test_get_hello_endpoint" time="0.007" timestamp="2020-11-23T21:48:19" file="lab5.2.py" line="10">
+		<error type="AttributeError" message="module 'app' has no attribute 'app'"><![CDATA[Traceback (most recent call last):
+  File "G:/lab4/lab5.2.py", line 8, in setUp
+    self.app = tested_app.app.test_client()
+AttributeError: module 'app' has no attribute 'app'
+]]></error>
+	</testcase>
+</testsuite>
