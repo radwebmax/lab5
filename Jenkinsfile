@@ -20,10 +20,10 @@ pipeline{
                     }
                     }
                     steps{
-                        sh 'apk add -update python3 py-pip'
-                        sh 'pip install Flask'
-                        sh 'pip install xmlrunner'
-                        sh 'python3 lab5.2.py'
+                        bat 'apk add -update python3 py-pip'
+                        bat 'pip install Flask'
+                        bat 'pip install xmlrunner'
+                        bat 'python3 lab5.2.py'
                     }
                     post{
                         always{
