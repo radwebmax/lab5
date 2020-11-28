@@ -24,9 +24,7 @@ pipeline{
                         //sh 'pip install Flask'
                         //sh 'pip install xmlrunner
                          timeout(time: 1, unit: 'MINUTES') {
-                                 sh '''#!/bin/sh
-                                         echo "Hello World"
-                                    '''
+                                  echo "Hello World"
                               // sh ' echo "Hello World" '
                 }
                     }
