@@ -22,8 +22,10 @@ pipeline{
                     steps{
                         //sh 'apk add -update python3 py-pip'
                         //sh 'pip install Flask'
-                        //sh 'pip install xmlrunner'
-                         sh ' echo "Hello World" '
+                        //sh 'pip install xmlrunner
+                         timeout(time: 1, unit: 'MINUTES') {
+                               sh ' echo "Hello World" '
+                }
                     }
                     post{
                         always{
