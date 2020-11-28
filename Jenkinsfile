@@ -15,7 +15,7 @@ pipeline{
                     }
                 }
                 stage('Test'){
-                    agent { docker{ image 'alpine'
+                    agent { docker{ image 'Ubuntu'
                                 args '-u=\"root\"'
                     }
                     }
@@ -24,7 +24,7 @@ pipeline{
                         //sh 'pip install Flask'
                         //sh 'pip install xmlrunner
                          timeout(time: 1, unit: 'MINUTES') {
-                                 sh """ #!/bin/sh echo "Hello World"
+                                  echo "Hello World"
                                    
                               
                 }
