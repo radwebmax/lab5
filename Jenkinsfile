@@ -25,6 +25,7 @@ pipeline{
                                  sh 'apk add -update python3 py-pip'
                                  sh 'pip install Flask'
                                  sh 'pip install xmlrunner'
+                                 sh 'python3 lab5.2.py'
                                    
                               
                 }
