@@ -15,7 +15,7 @@ pipeline{
                     }
                 }
                 stage('Test'){
-                    agent { docker{ image 'ubuntu'
+                    agent { docker{ image 'linux'
                                 args '-u=\"root\"'
                     }
                     }
