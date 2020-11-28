@@ -20,11 +20,12 @@ pipeline{
                     }
                     }
                     steps{
-                        //sh 'apk add -update python3 py-pip'
-                        //sh 'pip install Flask'
-                        //sh 'pip install xmlrunner
-                         timeout(time: 1, unit: 'MINUTES') {
+                        
+                         timeout(time: 3, unit: 'MINUTES') {
                                   echo "Hello World"
+                                 sh 'apk add -update python3 py-pip'
+                        sh 'pip install Flask'
+                        sh 'pip install xmlrunner
                                    
                               
                 }
