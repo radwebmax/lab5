@@ -15,16 +15,16 @@ pipeline{
                     }
                 }
                 stage('Test'){
-                    agent { docker{ image 'linux'
+                    agent { docker{ image 'alpine'
                                 args '-u=\"root\"'
                     }
                     }
                     steps{
                         
-                         timeout(time: 3, unit: 'MINUTES') {
-                                 sh 'apk add -update python3 py-pip'
-                                 sh 'pip install Flask'
-                                 sh 'pip install xmlrunner'
+                         timeout(time: 1, unit: 'MINUTES') {
+                                 $ 'apk add -update python3 py-pip'
+                                 $ 'pip install Flask'
+                                 $ 'pip install xmlrunner'
                                    
                               
                 }
