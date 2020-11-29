@@ -14,7 +14,12 @@ pipeline{
                         echo "Build complete"
                     }
                 }
-                stage('Test'){
+                    stage('test') {
+        docker.image('r-base:3.1.2').inside() {
+            sh(script: 'ping -c 2 jenkins.io')
+        }
+    }
+               /* stage('Test'){
                     agent { docker{ image 'alpine'
                                 args '-u=\"root\"'
                     }
@@ -29,7 +34,7 @@ pipeline{
                                    
                               
                // }
-                    }
+                    }*/
                     post{
                         always{
                             junit 'test-reports/*.xml'
