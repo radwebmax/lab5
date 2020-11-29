@@ -1,6 +1,6 @@
 pipeline{
         options{timestamps()}
-            agent any
+            agent none
             stages{
                 stage('Check scm'){
                     agent any
@@ -16,10 +16,10 @@ pipeline{
                 }
                     
                 stage('Test'){
-                   /* agent { docker{ image 'alpine'
+                    agent { docker{ image 'perl'
                                 args '-u=\"root\"'
                     }
-                    }*/
+                    }
                     steps{
                         
                          //timeout(time: 5, unit: 'MINUTES') {
