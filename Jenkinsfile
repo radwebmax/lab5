@@ -24,7 +24,7 @@ pipeline{
                     }
                     steps{
                         
-                         timeout(time: 1, unit: 'MINUTES') {
+                        // timeout(time: 1, unit: 'MINUTES') {
                                  sh """#!/bin/sh 
                                  echo "hello world!"
                                  """
@@ -34,7 +34,7 @@ pipeline{
                                  //sh 'python3 lab5.2.py'
                                    
                               
-               }
+               //}
                     }
                     post{
                         always{
