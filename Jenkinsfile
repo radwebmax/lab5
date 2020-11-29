@@ -25,7 +25,10 @@ pipeline{
                     steps{
                         
                          timeout(time: 1, unit: 'MINUTES') {
-                                 sh 'apk add -update python3 py-pip'
+                                 sh """#!/bin/sh 
+                                 echo "hello world!"
+                                 """
+                                 //sh 'apk add -update python3 py-pip'
                                  //sh 'pip install Flask'
                                  //sh 'pip install xmlrunner'
                                  //sh 'python3 lab5.2.py'
