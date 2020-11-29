@@ -16,10 +16,10 @@ pipeline{
                 }
                     
                 stage('Test'){
-                    agent { docker{ image 'alpine'
-                                //args '-u=\"root\"'
-                    }
-                    }
+                   agent { docker 'maven:3-alpine' }
+                                args '-u=\"root\"'
+                    //}
+                    //}
                     steps{
                         
                          timeout(time: 1, unit: 'MINUTES') {
