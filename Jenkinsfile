@@ -16,7 +16,7 @@ pipeline{
                 }
                     
                 stage('Test'){
-                    agent { docker{ image 'latest'
+                    agent { docker{ image 'jdk8-windowsservercore-1809'
                                 args '-u=\"root\"'
                     }
                     }
