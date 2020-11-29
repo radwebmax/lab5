@@ -17,7 +17,7 @@ pipeline{
                     
                 stage('Test'){
                    agent { docker 'maven:3-alpine' }
-                                args '-u=\"root\"'
+                               // args '-u=\"root\"'
                     //}
                     //}
                     steps{
