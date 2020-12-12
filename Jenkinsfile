@@ -39,8 +39,10 @@ pipeline
 			}
 			steps
 			{
-				sh 'pip install --no-cache-dir -r ./requirements.txt'
-				sh 'python3 unitTest.py'
+				sh 'apk add -update python3 py-pip'
+                                sh 'pip install Flask'
+                                sh 'pip install xmlrunner'
+                                sh 'python3 lab5.2.py'
 			}
 			post
 			{
