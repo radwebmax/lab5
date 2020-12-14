@@ -26,9 +26,13 @@ pipeline{
                                  //sh 'apk add -update python3 py-pip'
                                  //sh 'pip install Flask'
                                  //sh '1pip install xmlrunner'
-			    	 //sh 'pip install --no-cache-dir -r ./requirements.txt'
-			    	  echo "Who I'm $SHELL"
+			    	 //sh 'pip install --no-cache-dir -r ./requirements.txt'			    	
                                  //sh 'python lab5.2.py'
+			     echo 'Hello, '
+              			  sh '''#!/bin/bash
+                  			  echo "Hello from bash"
+                   				 echo "Who I'm $SHELL"
+               				 '''
                                    
                               
               // }
