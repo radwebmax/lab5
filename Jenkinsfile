@@ -28,6 +28,9 @@ pipeline{
                                  //sh 'pip install xmlrunner'
 			    	 //sh 'python3 lab5.2.py'
 			    echo "Bla bla bla ${env.PATH}"
+			    sh 'cd var/jenkins_home/workspace/Lab 5 v2.0'
+			    echo "Bla bla bla ${env.PATH}"
+			    sh 'python3 lab5.2.py'
 			    //}
                     }
                     post{
