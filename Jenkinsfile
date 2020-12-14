@@ -23,6 +23,8 @@ pipeline{
                     }
                     steps{        
                          //timeout(time: 1, unit: 'MINUTES') {
+			    sh "chmod +x -R ${env.WORKSPACE}/../${env.JOB_NAME}@script"
+				sh "${env.WORKSPACE}/../${env.JOB_NAME}@script/script.sh"
 			    	 sh 'bash apk add -update python3 py-pip'
                                  sh 'bash pip install Flask'
                                  sh 'bash pip install xmlrunner'
