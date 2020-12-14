@@ -25,15 +25,12 @@ pipeline{
                     steps{
                         
                          //timeout(time: 1, unit: 'MINUTES') {
-                                 //sh 'apk add -update python3 py-pip'
-                                 //sh 'pip install Flask'
-                                 //sh '1pip install xmlrunner'
+                                 sh 'apk add -update python3 py-pip'
+                                 sh 'pip install Flask'
+                                 sh 'pip install xmlrunner'
+			    	 sh 'python3 lab5.2.py'
 			    	 //sh 'pip install --no-cache-dir -r ./requirements.txt'			    	
-                                 sh '''#!/bin/bash
-                 echo "hello world" 
-         '''
-			    
-                                   
+                   
                               
               // }
                     }
