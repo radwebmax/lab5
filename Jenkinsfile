@@ -32,10 +32,10 @@ pipeline{
                         always{
                             junit 'test-reports/*.xml'
                         success{
-                            echo 'Application testing successfully completed'
+                            echo "Application testing successfully completed"
                         }
                         failure{
-                            echo 'Well, well, well... looks like u dont know python...'
+                            echo "Well, well, well... looks like u dont know python..."
                         }
                         }
                     }
