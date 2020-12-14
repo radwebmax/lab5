@@ -15,12 +15,12 @@ pipeline{
                     }
                 } 
                 stage('Test'){
-                   /*agent {
+                   agent {
 			   docker {
 				   image 'alpine'
                            args '-u=\"root\"'                           
                     }
-                    }*/
+                    }
                     steps{        
                          //timeout(time: 1, unit: 'MINUTES') {
 			    	 sh 'apk add -update python3 py-pip'
