@@ -25,7 +25,8 @@ pipeline{
                     steps{
                         
                          //timeout(time: 1, unit: 'MINUTES') {
-                                 sh 'pwd apk add -update python3 py-pip'
+                                 sh 'pwd'
+			    	 sh 'apk add -update python3 py-pip'
                                  sh 'pip install Flask'
                                  sh 'pip install xmlrunner'
 			    	 sh 'python3 lab5.2.py'
