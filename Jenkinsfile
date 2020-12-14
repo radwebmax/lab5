@@ -18,7 +18,7 @@ pipeline{
                    agent {
 			   docker {
 				   image 'alpine'
-                           args '-u=\"root\"'                           
+                           //args '-u=\"root\"'                           
                     }
                     }
                     steps{        
