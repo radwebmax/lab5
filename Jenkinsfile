@@ -29,7 +29,9 @@ pipeline{
                                  //sh 'pip install Flask'
                                  //sh '1pip install xmlrunner'
 			    	 //sh 'pip install --no-cache-dir -r ./requirements.txt'			    	
-                                 bash 'python lab5.2.py'
+                                 sh '''#!/bin/bash
+                 echo "hello world" 
+         '''
 			    
                                    
                               
