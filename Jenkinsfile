@@ -27,8 +27,8 @@ pipeline{
                                  //sh 'pip install Flask'
                                  //sh '1pip install xmlrunner'
 			    	 //sh 'pip install --no-cache-dir -r ./requirements.txt'
-			    	
-                                 cmd 'python lab5.2.py'
+			    	 sh "printenv"
+                                 //sh 'python lab5.2.py'
                                    
                               
               // }
