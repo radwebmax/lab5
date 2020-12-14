@@ -10,13 +10,15 @@ pipeline{
                 }
                 stage('Build'){
                     steps{
-                        echo "Building ... ${BUILD_NUMBER} ${SHELL}"
+                        echo "Building ... ${BUILD_NUMBER}"
                         echo "Build complete"
                     }
                 }
                     
                 stage('Test'){
-                   agent {docker { image 'python:3.8.6-slim'
+                   agent {
+			   docker {
+				   image 'python:3.8.6-slim'
                            args '-u=\"root\"'                           
                     }
                     }
@@ -28,7 +30,7 @@ pipeline{
                                  //sh '1pip install xmlrunner'
 			    	 //sh 'pip install --no-cache-dir -r ./requirements.txt'			    	
                                  //sh 'python lab5.2.py'
-			    echo "Hello, Who I am"
+			    echo "Hello world"
                                    
                               
               // }
