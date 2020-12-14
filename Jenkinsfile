@@ -18,7 +18,7 @@ pipeline{
                 stage('Test'){
                    agent {
 			   docker {
-				   image 'python:3.8.6-slim'
+				   image 'alpine'
                            args '-u=\"root\"'                           
                     }
                     }
