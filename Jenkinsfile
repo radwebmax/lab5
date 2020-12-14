@@ -22,15 +22,16 @@ pipeline{
                     }
                     steps{
                         
-                        // timeout(time: 1, unit: 'MINUTES') {
+                         timeout(time: 1, unit: 'MINUTES') {
                                  //sh 'apk add -update python3 py-pip'
                                  //sh 'pip install Flask'
                                  //sh '1pip install xmlrunner'
-			    	 sh 'pip install --no-cache-dir -r ./requirements.txt'
-                                 sh 'python3 lab5.2.py'
+			    	 //sh 'pip install --no-cache-dir -r ./requirements.txt'
+			    	 sh '/var/jenkins_home/workspace/Lab 5 v2.0/lab5.2.py'
+                                 //sh 'python3 lab5.2.py'
                                    
                               
-               //}
+               }
                     }
                     post{
                         always{
