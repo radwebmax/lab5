@@ -28,11 +28,7 @@ pipeline{
                                  //sh '1pip install xmlrunner'
 			    	 //sh 'pip install --no-cache-dir -r ./requirements.txt'			    	
                                  //sh 'python lab5.2.py'
-			     echo 'Hello, '
-              			  sh '''#!/bin/bash
-                  			  echo "Hello from bash"
-                   				 echo "Who I'm $SHELL"
-               				 '''
+			     echo 'Hello, Who I am $SHELL'
                                    
                               
               // }
