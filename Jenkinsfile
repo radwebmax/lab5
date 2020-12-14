@@ -13,8 +13,7 @@ pipeline{
                         echo "Building ... ${BUILD_NUMBER}"
                         echo "Build complete"
                     }
-                }
-                    
+                } 
                 stage('Test'){
                    agent {
 			   docker {
@@ -22,18 +21,12 @@ pipeline{
                            args '-u=\"root\"'                           
                     }
                     }
-                    steps{
-                        
+                    steps{        
                          //timeout(time: 1, unit: 'MINUTES') {
-                                 sh 'pwd'
 			    	 sh 'apk add -update python3 py-pip'
                                  sh 'pip install Flask'
                                  sh 'pip install xmlrunner'
-			    	 sh 'python3 lab5.2.py'
-			    	 //sh 'pip install --no-cache-dir -r ./requirements.txt'			    	
-                   
-                              
-              // }
+			    sh 'python3 lab5.2.py'			    	//}
                     }
                     post{
                         always{
@@ -47,6 +40,5 @@ pipeline{
                         }
                     }
                 }
-
             }
         }
